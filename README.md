@@ -4,7 +4,8 @@
 
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+This package contains the zfs init scripts for OpenRC.
+You MUST install [zfs-utils](https://aur.archlinux.org/packages/zfs-utils) and [zfs-dkms](https://aur.archlinux.org/packages/zfs-dkms) or [zfs-utils-git](https://aur.archlinux.org/packages/zfs-utils-git) and [zfs-dkms-git](https://aur.archlinux.org/packages/zfs-dkms-git)
 
 Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
