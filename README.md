@@ -14,5 +14,6 @@ To use this just clone this repository and run:
     makepkg -sri 
 
 Then you must enable the services that you need with:
-    sudo rc-update add "<nameofservice>" boot
+
+    sudo rc-update add "nameofservice" boot
     sudo rc-update add zfs-mount boot (THIS IS IMPORTANT!! Otherwise the zpool(s) will be imported but not mounted!)
