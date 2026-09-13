@@ -15,8 +15,11 @@ To use this just clone this repository and run:
 
 Then you must enable the services that you need with:
 
-    sudo rc-update add zfs-import boot ## (This is needed!)
-    sudo rc-update add zfs-load-key boot ## (Only if you need it!)
-    sudo rc-update add zfs-share boot ## (Only if you need it!)
-    sudo rc-update add zfs-zed boot ## (This is needed!)
-    sudo rc-update add zfs-mount boot ## (THIS IS IMPORTANT!! Otherwise the zpool(s) will be imported but not mounted!)
+    sudo rc-update add zfs-import sysinit ## (This is needed!)
+    sudo rc-update add zfs-load-key sysinit ## (Only if you need it: it runs between import and mount)
+    sudo rc-update add zfs-mount sysinit ## (THIS IS IMPORTANT!! Otherwise the zpool(s) will be imported but not mounted!)
+    sudo rc-update add zfs-zed default ## (This is needed!)
+    sudo rc-update add zfs-share default ## (Only if you need it!)
+
+Import and mount belong in `sysinit`, as on Gentoo, so the pools are mounted
+before anything in `boot` (localmount included) or `default` starts.
